@@ -7,6 +7,19 @@ import random
 
 STAGE = "Prepare_data" ## <<< change stage name 
 
+def setup_logging():
+    try:
+        log_file = os.path.join("logs", 'running_logs.log')
+        if not os.path.exists(os.path.dirname(log_file)):
+            os.makedirs(os.path.dirname(log_file))
+        if not os.path.isfile(log_file):
+            open(log_file, 'a').close()  
+    except Exception as e:
+        print(f"Error creating log file: {e}")
+
+# Call the function to setup logging
+# setup_logging()
+
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'), 
     level=logging.INFO, 
