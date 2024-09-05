@@ -1,6 +1,7 @@
 ### dependency
 tqdm
 dvc
+fsspec == 2022.11.0
 pandas
 numpy
 PyYAML
@@ -8,5 +9,6 @@ mkdocs-material
 Scipy
 Scikit-learn
 lxml
+
 ### local packages -
 -e . # << uncomment this to install from setup.py
